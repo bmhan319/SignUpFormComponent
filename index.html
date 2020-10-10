@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'> 
+  <link rel='icon' type='image/png' href='favicon.png'>
+  <link rel='stylesheet' href='index.css'>
+  <title>Document</title>
+</head>
+<body onload="formReset()">
+  <main class="mainContainer">
+    <div class="sectionContainer">
+      <section class="section1">
+        <div class="sec1TextContainer">
+          <h1 class="sec1-title">Learn to code by <br/>watching others</h1>
+          <p class="sec1-text">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable. </p>
+        </div>
+      </section>
+
+      <section class="section2">
+        <div class="trialContainer">
+          <p class="trialText"><span class="trialTextBold">Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+
+        <div class="formContainer">
+          <form class="form" name="myForm" method="post" onsubmit="return validateForm()">
+            <div class="first"><div class="warning warningFirst">!</div><input class="formField inputField firstField" type="text" name="firstname" id="" placeholder="First Name"></div>
+            <div class="last"><div class="warning warningLast">!</div><input class="formField inputField lastField" type="text" name="lastname" id="" placeholder="Last Name"></div>
+            <div class="email"><div class="warning warningEmail">!</div><input class="formField inputField emailField" type="email" name="emailaddress" id="" placeholder="Email Address"></div>
+            <div class="password"><div class="warning warningPassword">!</div><input class="formField inputField passwordField" type="password" name="password" id="" placeholder="Password"></div>
+            <input class="formField submitButton" type="submit" value="Claim your free trial"/>
+          </form>
+
+          <div class="termsContainer">
+            <p class="termsText">By clicking the button, you are agreeing to our <a href="#" class="termsLink">Terms and Services</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+<script src='index.js'></script>
+</html>

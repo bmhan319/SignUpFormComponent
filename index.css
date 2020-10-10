@@ -1,0 +1,249 @@
+:root {
+  /* Color */
+  /* Primary */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  /* Accent */
+  --Blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+  --DarkBlue: hsl(249, 10%, 26%); 
+  --GrayishBlue: hsl(246, 25%, 77%);
+
+  /* Typography */
+  /* Font Size */
+  --Size: 16px;
+
+  /* Font Type */
+  --Family: 'Poppins', sans-serif;
+  /* Weight: 400, 500, 600, 700 */
+
+  /* Side Padding */
+  --SidePadding: 0 24px;
+  --SidePaddingBig: 0 36px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--Family);
+  font-size: var(--Size);
+}
+
+.mainContainer {
+  width: 375px;
+  background-image: url(./img/bg-intro-mobile.png);
+  background-color: var(--Red);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.section1 {
+  padding: var(--SidePadding);
+  padding-top: 92px;
+  padding-bottom: 60px ;
+  color: #fff;
+  text-align: center;
+}
+
+.sec1-title {
+  font-weight: 600;
+  font-size: 1.7em;
+  line-height: 1.25em;
+  margin-bottom: 20px;
+}
+
+.sec1-text {
+  font-weight: 400;
+  font-size: .95em;
+  letter-spacing: .9px;
+  line-height: 1.75em;
+}
+
+.section2 {
+  padding: var(--SidePadding);
+  padding-bottom: 72px;  
+}
+
+.trialContainer {
+  background-color: var(--Blue);
+  border-radius: 10px;
+  padding: 18px 50px;
+  margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0px 8px 0px 0px rgba(0,0,0,.17);
+}
+
+.trialText {
+  color: #fff;
+  font-weight: 200;
+  font-size: 1em;
+  letter-spacing: .2px;
+}
+
+.trialTextBold {
+  font-weight: 400;
+}
+
+.formContainer {
+  background-color: #fff;
+  padding: var(--SidePadding);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 0 rgba(0,0,0,.2);
+}
+
+.formField {
+  width: 100%;
+  border-radius: 6px;
+  padding: 15px; 
+}
+
+.inputField {
+  color: #000;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  box-shadow: 0;
+  font-size: .9em;
+  font-weight: 500;
+}
+
+.inputField::placeholder {
+  color: #111;
+}
+
+.inputField:focus {
+  outline: none;
+  box-shadow: 0 0 0 1pt #000;
+}
+
+.submitButton {
+  color: #fff;
+  -webkit-text-stroke-width: .1px;
+  -webkit-text-stroke-color:var(--GrayishBlue);
+  border: 1px solid var(--GrayishBlue);
+  background-color: var(--Green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: inset 0 -3px 0 0 rgba(0,0,0,.1);
+  cursor: pointer;
+}
+
+
+/* Form Error */
+.error {
+  position: relative;
+}
+
+.error::after{
+  content: attr(title)" cannot be empty";
+  display: flex;
+  justify-content: right;
+  color: var(--Red);
+  font-size: .6em;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.warning {
+  background-color: var(--Red);
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 23%;
+  right: 5%;
+  border-radius: 50%;
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorField {
+  margin: 0;
+  border:2px solid var(--Red);
+  color: var(--Red)
+}
+/* End Form Error */
+
+
+
+
+
+
+.termsContainer {
+  text-align: center;
+  margin-top: 12px;
+  padding: var(--SidePadding);
+}
+
+.termsText {
+  font-size: .65em;
+  color: var(--GrayishBlue);
+  line-height: 20px;
+}
+
+.termsLink {
+  color: var(--Red);
+  font-size: 1em;
+  text-decoration: none;
+}
+
+/* Media Query */
+ @media only screen and (min-width: 1100px) {
+  .mainContainer {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/bg-intro-desktop.png);
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sectionContainer {
+    width: 1100px;
+    display: flex;
+  }
+
+  .section1 {
+    width: 50%;
+    padding: 0;
+    text-align: left;
+    display: inherit;
+    align-items: center;
+  }
+
+  .sec1-title {
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 24px;
+  }
+
+  .sec1-text {
+    font-weight: 400;
+    font-size: .95em;
+    letter-spacing: .9px;
+    line-height: 1.75em;
+  }
+
+  .section2 {
+    width: 50%;
+    padding: 0;
+  }
+
+  .formContainer {
+    padding: var(--SidePaddingBig);
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .inputField {
+    padding-left: 40px;
+  }
+}
